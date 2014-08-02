@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.h6ah4i.android.daydreamserviceleakcheck" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <service
+            android:name=".LeakCheckDreamService"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name"
+            android:enabled="true"
+            android:exported="true" >
+　　　　　　  <intent-filter>
+　　　　　　　　   <action android:name="android.service.dreams.DreamService"/>
+　　　　　　　　   <category android:name="android.intent.category.DEFAULT"/>
+　　　　　　  </intent-filter>
+        </service>
+    </application>
+
+</manifest>
